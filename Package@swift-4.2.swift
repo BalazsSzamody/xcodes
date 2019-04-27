@@ -1,18 +1,15 @@
-// swift-tools-version:5.0
+// swift-tools-version:4.2
 import PackageDescription
 
 let package = Package(
     name: "xcodes",
-    platforms: [
-       .macOS(.v10_13)
-    ],
     products: [
         .executable(name: "xcodes", targets: ["xcodes"]),
         .library(name: "XcodesKit", targets: ["XcodesKit"]),
         .library(name: "AppleAPI", targets: ["AppleAPI"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/nsomar/Guaka.git", .upToNextMinor(from: "0.4.0")),
+        .package(url: "https://github.com/nsomar/Guaka.git", .upToNextMinor(from: "0.3.1")),
         .package(url: "https://github.com/mxcl/Path.swift.git", .upToNextMinor(from: "0.16.0")),
         .package(url: "https://github.com/mxcl/Version.git", .upToNextMinor(from: "1.0.3")),
         .package(url: "https://github.com/mxcl/PromiseKit.git", .upToNextMinor(from: "6.8.3")),
